@@ -4,11 +4,12 @@ import com.atlassian.jira.event.comment.CommentCreatedEvent
 
 class CopyPasteComment {
 
-String IssueComment = issue.getIssueComment()
+String issueComment = issue.getIssueComment()   //gets comments from issue
+String lastComment = issueComment.to            //gets the last comment
 String IssueDescrip 
 
-    if (event istanceof CommentCreatedEvent) {
-    set IssueDescrip as IssueComment
+    if (event istanceof CommentCreatedEvent) {  //trigures in the event of comment created
+    set IssueDescrip as lastComment             //Sets value of lastcomment as the Issue Description
     }
 }
 
