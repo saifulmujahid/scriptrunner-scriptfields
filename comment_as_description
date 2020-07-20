@@ -1,0 +1,9 @@
+import com.atlassian.jira.component.ComponentAccessor
+import com.atlassian.jira.event.comment.CommentCreatedEvent
+
+def IssueComment = issue.comment
+def descrip = issue." "
+
+if (event istanceof CommentCreatedEvent) {
+    set descrip as IssueComment
+}
