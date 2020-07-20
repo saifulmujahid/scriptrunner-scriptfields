@@ -1,9 +1,17 @@
 import com.atlassian.jira.component.ComponentAccessor
+import com.atlassian.jira.issue.Issue
 import com.atlassian.jira.event.comment.CommentCreatedEvent
 
-def IssueComment = issue.comment
-def descrip = issue." "
+class CopyPasteComment {
 
-if (event istanceof CommentCreatedEvent) {
-    set descrip as IssueComment
+String IssueComment = issue.getIssueComment()
+String IssueDescrip 
+
+    if (event istanceof CommentCreatedEvent) {
+    set IssueDescrip as IssueComment
+    }
 }
+
+
+
+
